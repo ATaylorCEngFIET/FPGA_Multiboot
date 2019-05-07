@@ -1,0 +1,183 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue May  7 12:38:49 2019
+# Process ID: 24512
+# Current directory: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent31296
+# Log file: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+WARNING: [Common 17-1271] The MYVIVADO environment variable specifies an invalid location 'C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado'
+start_gui
+open_project C:/hdl_projects/fpga_multiboot/fpga_multiboot.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/HDL_projects_git/AT426-BU-98000-r0p0-00rel0/AT426-BU-98000-r0p0-00rel0/AT426-BU-98000-r0p0-00rel0/vivado/Arm_ipi_repository'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:36 ; elapsed = 00:00:22 . Memory (MB): peak = 925.941 ; gain = 312.387
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+WARNING: Ignoring invalid XILINX_PATH location C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado.
+Resolution: An invalid XILINX_PATH location has been detected. To resolve this issue:
+
+1. Verify the value of XILINX_PATH is accurate by viewing the value the variable via 'set XILINX_PATH' for Windows or 'echo $XILINX_PATH' for Linux, and update it as needed.
+
+2. To unset the variable using on Windows using 'set XILINX_PATH=' or remove it from Advanced System Settings\Environment Variables. On Linux 'unsetenv XILINX_PATH'
+
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210319A92B5BA
+set_property PROGRAM.FILE {C:/hdl_projects/fpga_multiboot/fpga_multiboot.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+ERROR: [Labtools 27-2149] File C:/hdl_projects/fpga_multiboot/fpga_multiboot.runs/impl_1/design_1_wrapper.bit not found. Check file name and file permissions.
+create_hw_cfgmem -hw_device [lindex [get_hw_devices xc7a100t_0] 0] [lindex [get_cfgmem_parts {s25fl128sxxxxxx0-spi-x1_x2_x4}] 0]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.FILES [list "C:/hdl_projects/fpga_multiboot/fpga_multiboot.runs/impl_1/Working_image.mcs" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.PRM_FILE {C:/hdl_projects/fpga_multiboot/fpga_multiboot.runs/impl_1/image.prm} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a100t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a100t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0];
+INFO: [Labtools 27-3164] End of startup status: HIGH
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
+Mfg ID : 1   Memory Type : 20   Memory Capacity : 18   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:04 ; elapsed = 00:01:48 . Memory (MB): peak = 2113.227 ; gain = 0.000
+endgroup
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+archive_project C:/hdl_projects/fpga_multiboot.xpr.zip -temp_dir C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-24512-DESKTOP-HQKVQ13 -force -exclude_run_results -include_local_ip_cache -include_config_settings
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-24512-DESKTOP-HQKVQ13' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/HDL_projects_git/AT426-BU-98000-r0p0-00rel0/AT426-BU-98000-r0p0-00rel0/AT426-BU-98000-r0p0-00rel0/vivado/Arm_ipi_repository'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
+Current project path is 'C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-24512-DESKTOP-HQKVQ13/PrjAr/_X_'.
+INFO: [Coretcl 2-135] resetting runs for excluding generated files from archive...
+WARNING: [Coretcl 2-105] Run 'synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_rst_mig_7series_0_83M_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_rst_mig_7series_0_83M_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_axi_gpio_0_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_axi_gpio_0_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_axi_ethernetlite_0_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_axi_ethernetlite_0_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_mig_7series_0_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_mig_7series_0_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_axi_timer_0_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_axi_timer_0_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_axi_uartlite_0_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_axi_uartlite_0_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_axi_smc_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_axi_smc_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_microblaze_0_1_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_microblaze_0_1_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_xbar_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_xbar_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_microblaze_0_axi_intc_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_microblaze_0_axi_intc_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_mdm_1_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_mdm_1_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_axi_quad_spi_0_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_axi_quad_spi_0_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_clk_wiz_0_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_clk_wiz_0_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_lmb_bram_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_lmb_bram_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_ilmb_bram_if_cntlr_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_ilmb_bram_if_cntlr_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_dlmb_bram_if_cntlr_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_dlmb_bram_if_cntlr_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_xadc_wiz_0_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_xadc_wiz_0_0_synth_1'...
+INFO: [Coretcl 2-133] re-setting run 'impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_rst_mig_7series_0_83M_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_axi_gpio_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_axi_ethernetlite_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_mig_7series_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_axi_timer_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_axi_uartlite_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_axi_smc_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_microblaze_0_1_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_xbar_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_microblaze_0_axi_intc_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_mdm_1_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_axi_quad_spi_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_clk_wiz_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_lmb_bram_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_ilmb_bram_if_cntlr_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_dlmb_bram_if_cntlr_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_xadc_wiz_0_0_impl_1'...
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_axi_ethernetlite_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_axi_ethernetlite_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_axi_gpio_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_axi_gpio_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_axi_quad_spi_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_axi_quad_spi_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_axi_smc_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_axi_smc_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_axi_timer_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_axi_timer_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_axi_uartlite_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_axi_uartlite_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_clk_wiz_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_clk_wiz_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_dlmb_bram_if_cntlr_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_dlmb_bram_if_cntlr_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_ilmb_bram_if_cntlr_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_ilmb_bram_if_cntlr_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_lmb_bram_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_lmb_bram_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_mdm_1_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_mdm_1_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_microblaze_0_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_microblaze_0_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_microblaze_0_axi_intc_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_microblaze_0_axi_intc_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_mig_7series_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_mig_7series_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_rst_mig_7series_0_83M_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_rst_mig_7series_0_83M_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_xadc_wiz_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_xadc_wiz_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_xbar_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_xbar_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
